@@ -158,7 +158,7 @@ body {
 }
 
 .header__top-leftpart_geo::before {
-	content: url(/assets/images/icons/geo.svg);
+	content: url(assets/images/icons/geo.svg);
 	display: inline-block;
 	width: 16px;
 	height: 18px;
@@ -168,7 +168,7 @@ body {
 }
 
 .header__top-leftpart_time::before {
-	content: url(/assets/images/icons/time.svg);
+	content: url(assets/images/icons/time.svg);
 	display: inline-block;
 	width: 16px;
 	height: 20px;
@@ -222,7 +222,7 @@ body {
 
 .section_main-banner {
 	min-height: 742px;
-	background:  url("/assets/images/main.png") no-repeat 100% 100%;
+	background:  url("assets/images/main.png") no-repeat 100% 100%;
 	background-size: cover;
 	position: relative;
 }
@@ -245,7 +245,7 @@ body {
 	top: 50%;
 	left: 4%;
 	transform: translate(0%, -50%);
-	background: url("/assets/images/side-scroll.png") no-repeat 100% 100%;
+	background: url("assets/images/side-scroll.png") no-repeat 100% 100%;
 	width: 31px;
 	height: 252px;
 }
@@ -360,30 +360,30 @@ body {
 }
 
 .main-banner__menu-item_vk {
-	background-image: url("/assets/images/icons/vk.svg");
+	background-image: url("assets/images/icons/vk.svg");
 }
 
 .main-banner__menu-item_yt {
-	background-image: url("/assets/images/icons/youtube.svg");
+	background-image: url("assets/images/icons/youtube.svg");
 }
 
 .main-banner__menu-item_ok {
-	background-image: url("/assets/images/icons/ok.svg");
+	background-image: url("assets/images/icons/ok.svg");
 }
 
 .main-banner__menu-item_web {
-	background-image: url("/assets/images/icons/web.svg");
+	background-image: url("assets/images/icons/web.svg");
 }
 
 .main-banner__menu-item_tg {
-	background-image: url("/assets/images/icons/tg.svg");
+	background-image: url("assets/images/icons/tg.svg");
 }
 .section {
 
 }
 
 .section_values {
-	background:  url("/assets/images/in_heart_back.png") no-repeat ;
+	background:  url("assets/images/in_heart_back.png") no-repeat ;
 	background-size: cover;
 	position: relative;
 }
@@ -417,7 +417,7 @@ body {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background: url("/assets/images/pattern.png") no-repeat;
+	background: url("assets/images/pattern.png") no-repeat;
 	position: absolute;
 	z-index: -1;
 	top: 0;
@@ -428,7 +428,7 @@ body {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background: url("/assets/images/pattern_r.png") no-repeat 100% 100%;
+	background: url("assets/images/pattern_r.png") no-repeat 100% 100%;
 	position: absolute;
 	z-index: -1;
 	top: 0;
@@ -437,7 +437,7 @@ body {
 .section_bottom-wave::after {
 	content: '';
 	display: block;
-	background-image: url("/assets/images/wave.png");
+	background-image: url("assets/images/wave.png");
 	background-position: 0 -124px;
 	height: 11px;
 	position: absolute;
@@ -462,7 +462,7 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background:  url("/assets/images/ref_background.png") rgba(11, 27, 50, .85) no-repeat;
+	background:  url("assets/images/ref_background.png") rgba(11, 27, 50, .85) no-repeat;
 	background-size: cover;
 }
 
@@ -891,7 +891,7 @@ body {
 .section__subtitle_brilliant::after {
 	content: '';
 	display: block;
-	background: url("/assets/images/ref_brilliant.png");
+	background: url("assets/images/ref_brilliant.png");
 	width: 158px;
 	height: 138px;
 	position: absolute;
@@ -1149,7 +1149,7 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 148px;
-	background-image: url(/assets/images/vacancy_line.png);
+	background-image: url(assets/images/vacancy_line.png);
 	background-repeat: no-repeat;
 	margin: 240px 0 0 43px;
 }
@@ -1169,7 +1169,7 @@ body {
 	height: 47px;
 	right: -76px;
 	top: 10px;
-	background-image: url(/assets/images/point_top.png);
+	background-image: url(assets/images/point_top.png);
 	background-repeat: no-repeat;
 }
 
@@ -1196,7 +1196,7 @@ body {
 	height: 56px;
 	right: -83px;
 	top: 184px;
-	background-image: url(/assets/images/point_bottom.png);
+	background-image: url(assets/images/point_bottom.png);
 	background-repeat: no-repeat;
 }
 
@@ -1208,7 +1208,7 @@ body {
 	height: 56px;
 	right: -89px;
 	top: -37px;
-	background-image: url(/assets/images/point_bottom.png);
+	background-image: url(assets/images/point_bottom.png);
 	background-repeat: no-repeat;
 }
 
@@ -1362,7 +1362,7 @@ body {
 
 .section_form {
 	min-height: 863px;
-	background: url(/assets/images/main.png) no-repeat 100% 100%;
+	background: url(assets/images/main.png) no-repeat 100% 100%;
 	background-size: cover;
 	position: relative;
 }
@@ -1428,7 +1428,7 @@ body {
 }
 
 input[type="date"].section__form-input_date::-webkit-calendar-picker-indicator {
-	background: url('/assets/images/icons/calendar.svg') no-repeat;
+	background: url('assets/images/icons/calendar.svg') no-repeat;
 	margin: 2px 21px 0 0;
 	width: 24px;
 	height: 24px;
@@ -1606,23 +1606,23 @@ input[type="date"].section__form-input_date {
 }
 
 .footer__link_vk {
-	background-image: url("/assets/images/icons/vk_red.svg");
+	background-image: url("assets/images/icons/vk_red.svg");
 }
 
 .footer__link_yt {
-	background-image: url("/assets/images/icons/youtube_red.svg");
+	background-image: url("assets/images/icons/youtube_red.svg");
 }
 
 .footer__link_tg {
-	background-image: url("/assets/images/icons/tg_red.svg");
+	background-image: url("assets/images/icons/tg_red.svg");
 }
 
 .footer__link_web {
-	background-image: url("/assets/images/icons/web_red.svg");
+	background-image: url("assets/images/icons/web_red.svg");
 }
 
 .footer__link_ok {
-	background-image: url("/assets/images/icons/ok_red.svg");
+	background-image: url("assets/images/icons/ok_red.svg");
 }
 
 .footer__second-line {
@@ -1698,7 +1698,7 @@ a.footer__textlink {
 
 .popup-form__image-container {
 	position: relative;
-	background: url("/assets/images/popup-back.png") no-repeat;
+	background: url("assets/images/popup-back.png") no-repeat;
 	object-fit: cover;
 	height: 1383px;
 	overflow: hidden;
@@ -1921,7 +1921,7 @@ footer {
 
 @media screen and (max-width: 1023px) {
 	.section_bottom-wave::after {
-		background-image: url(/assets/images/wave-tablet.png);
+		background-image: url(assets/images/wave-tablet.png);
 		background-position: 0 -75px;
 	}
 
@@ -1975,7 +1975,7 @@ footer {
 
 	.section_main-banner {
 		min-height: 542px;
-		background:  url("/assets/images/main-tablet.png") no-repeat 100% 100%;
+		background:  url("assets/images/main-tablet.png") no-repeat 100% 100%;
 		background-size: cover;
 	}
 	.main-banner__text-container {
@@ -2263,7 +2263,7 @@ footer {
 	}
 
 	.header__top-right-phone::before {
-		content: url(/assets/images/icons/call_2.svg);
+		content: url(assets/images/icons/call_2.svg);
 		display: inline-block;
 		width: 12px;
 		height: 20px;
@@ -2330,7 +2330,7 @@ footer {
 	}
 
 	.section_main-banner {
-		background: url(/assets/images/main-phone.png) no-repeat;
+		background: url(assets/images/main-phone.png) no-repeat;
 		min-height: 492px;
 		background-size: cover;
 	}
@@ -2367,7 +2367,7 @@ footer {
 	}
 
 	.section_bottom-wave::after {
-		background-image: url(/assets/images/wave-mob.png);
+		background-image: url(assets/images/wave-mob.png);
 		background-position: 0 center;
 	}
 
@@ -2510,7 +2510,7 @@ footer {
 	}
 
 	.section_values {
-		background: url(/assets/images/in_heart_back-mob.png) no-repeat;
+		background: url(assets/images/in_heart_back-mob.png) no-repeat;
 		background-size: auto 47%;
 		background-color: #0B1B3280;
 		background-position-y: -2%;
