@@ -388,7 +388,7 @@ body {
 	position: relative;
 }
 
-.section_values::before {
+.section_values::before, .section_form::before {
 	content: '';
 	display: block;
 	width: 100%;
@@ -1754,18 +1754,20 @@ a.footer__textlink {
 	padding: 0;
 }
 
-/*.section:not(.section_main-banner, .section_find, .section_about, .section_values, .section_mission, .section_why-we) {*/
-/*	display: none;*/
-/*}*/
+@media screen and (max-width: 1569px) {
+.section:not(.section_main-banner, .section_find, .section_about, .section_values, .section_mission, .section_why-we) {
+	display: none;
+}
 
-/*.section__container__ref-people {*/
-/*	display: none;*/
-/*}*/
+.section__container__ref-people {
+	display: none;
+}
 
 
-/*footer {*/
-/*	display: none;*/
-/*}*/
+footer {
+	display: none;
+}
+}
 
 @media screen and (max-width: 1569px) {
 	.main-banner__text-container {
