@@ -43,10 +43,12 @@ for (i = 0; i < acc.length; i++) {
 
 const swiper = new Swiper('.swiper-vacancies', {
 	speed: 400,
-	spaceBetween: 0,
-	slidesPerView: 4,
-	slidesPerGroup: 4,
+	spaceBetween: 66,
+	slidesPerView: 1,
+	slidesPerGroup: 1,
 	allowTouchMove: false,
+	loop: true,
+	loopAddBlankSlides: true,
 	pagination: {
 		el: '.section__vacancy-pagination',
 		clickable: true,
@@ -55,6 +57,28 @@ const swiper = new Swiper('.swiper-vacancies', {
 		renderBullet: function (index, className) {
 			return '<span class="section__vacancy-pagination-bullet '+className+'">' + (index + 1) + "</span>";
 		},
+	},
+	breakpoints: {
+		768: {
+			spaceBetween: 5,
+			slidesPerView: 4,
+			slidesPerGroup: 4,
+		},
+		1024: {
+			spaceBetween: 40,
+			slidesPerView: 4,
+			slidesPerGroup: 4,
+		},
+		1570: {
+			spaceBetween: 50,
+			slidesPerView: 4,
+			slidesPerGroup: 4,
+		},
+		1920: {
+			spaceBetween: 66,
+			slidesPerView: 4,
+			slidesPerGroup: 4,
+		}
 	}
 });
 
