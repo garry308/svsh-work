@@ -42,15 +42,14 @@ for (i = 0; i < acc.length; i++) {
 }
 
 const swiper = new Swiper('.swiper-vacancies', {
+	init: false,
 	speed: 400,
 	spaceBetween: 66,
 	slidesPerView: 1,
 	slidesPerGroup: 1,
 	allowTouchMove: false,
-	loop: true,
-	loopAddBlankSlides: true,
 	pagination: {
-		el: '.section__vacancy-pagination',
+		el: '.section__vacancy-pagination-container',
 		clickable: true,
 		type: 'bullets',
 		bulletActiveClass: 'section__vacancy-pagination-bullet_active',
@@ -58,29 +57,92 @@ const swiper = new Swiper('.swiper-vacancies', {
 			return '<span class="section__vacancy-pagination-bullet '+className+'">' + (index + 1) + "</span>";
 		},
 	},
+	navigation: {
+		nextEl: '.section__vacancy-pagination-bullet_next',
+		prevEl: '.section__vacancy-pagination-bullet_prev',
+		disabledClass: 'disabled'
+	},
 	breakpoints: {
 		768: {
 			spaceBetween: 5,
 			slidesPerView: 4,
 			slidesPerGroup: 4,
+			loop: true,
+			loopAddBlankSlides: true,
 		},
 		1024: {
 			spaceBetween: 40,
 			slidesPerView: 4,
 			slidesPerGroup: 4,
+			loop: true,
+			loopAddBlankSlides: true,
 		},
 		1570: {
 			spaceBetween: 50,
 			slidesPerView: 4,
 			slidesPerGroup: 4,
+			loop: true,
+			loopAddBlankSlides: true,
 		},
 		1920: {
 			spaceBetween: 66,
 			slidesPerView: 4,
 			slidesPerGroup: 4,
+			loop: true,
+			loopAddBlankSlides: true,
 		}
 	}
 });
+
+function checkBullets(swiper) {
+	if (window.matchMedia("(max-width: 767px)").matches) {
+		swiper.pagination.bullets.forEach((bullet, key) => {
+			if (swiper.activeIndex === key || swiper.activeIndex + 1 === key)
+				bullet.style.display = 'inline-block';
+			else
+				bullet.style.display = 'none'
+		})
+	}
+}
+
+function checkPagination() {
+	if (!window.matchMedia("(max-width: 767px)").matches && swiper.navigation.nextEl && swiper.navigation.prevEl) {
+		console.log(swiper)
+		if (swiper.snapGrid.keys.length + 1 === swiper.snapIndex || swiper.snapGrid.keys.length < 2)
+			swiper.navigation.nextEl.style.display = 'none';
+		else
+			swiper.navigation.nextEl.style.display = 'block';
+
+		if (swiper.snapIndex === 0)
+			swiper.navigation.prevEl.style.display = 'none';
+		else
+			swiper.navigation.prevEl.style.display = 'block';
+	}
+}
+swiper.on('slideChange', function () {
+	checkBullets(this);
+	checkPagination(this);
+});
+
+swiper.on('init', function () {
+	checkBullets(this);
+});
+
+swiper.init();
+
+const sideMenuButtons = document.querySelectorAll('.header__menu-icon-mobile, .footer__menu-icon-mobile');
+const sideMenu = document.querySelector('.header__menu-mobile')
+const sideMenuWrapper = document.querySelector('.header__menu-mobile')
+sideMenuButtons.forEach((button) => {
+	button.addEventListener('click', () => {
+		sideMenu.classList.add('active');
+	})
+})
+sideMenuWrapper.addEventListener('click', () => {
+	console.log('wro');
+	sideMenu.classList.remove('active')
+})
+
 
 const elements = document.querySelectorAll('.section__form-input_phone');
 const maskOptions = {
@@ -92,6 +154,7 @@ elements.forEach((el) => {
 
 Fancybox.bind('[data-fancybox]', {
 	dragToClose: false,
+	closeButton: true,
 	on: {
 		reveal: (fancybox, slide) => {
 			let title = slide.contentEl.querySelector('.popup-form__title')
@@ -121,3 +184,5 @@ window.dataVacancy = {
 		description: 'Управляющий сетью фастфуд - руководит, организует и контролирует внешние и внутренние процессы деятельности торговых точек.'
 	},
 }
+
+
