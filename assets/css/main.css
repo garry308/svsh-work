@@ -2959,6 +2959,13 @@ a.footer__textlink {
 	.popup-form input[type=date].section__form-input_date {
 		padding: 1px 0 1px 18px
 	}
+
+	.popup-form .section__form-field_date::after {
+		top: calc(100% - 27px);
+		width: 12px;
+		height: 12px;
+		background-size: cover;
+	}
 }
 
 @media screen and (max-width: 767px) {
