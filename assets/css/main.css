@@ -413,7 +413,7 @@ body:has(.header__menu-mobile.active) {
 
 .main-banner__employee-container {
 	position: absolute;
-	bottom: 0;
+	bottom: -2px;
 	left: 44%
 }
 
