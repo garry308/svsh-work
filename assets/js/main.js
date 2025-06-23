@@ -185,6 +185,12 @@ window.dataVacancy = {
 	},
 }
 
-
-new AirDatepicker('#footer_date', [])
-new AirDatepicker('#popup_date', [])
+let isMobile = window.matchMedia("(max-width: 767px)").matches;
+if (!isMobile) {
+	new AirDatepicker('#footer_date', {
+		autoClose: true,
+	})
+	new AirDatepicker('#popup_date', {
+		autoClose: true,
+	})
+}
