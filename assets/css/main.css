@@ -742,7 +742,9 @@ body:has(.header__menu-mobile.active) {
 	width: -moz-fit-content;
 	width: fit-content;
 	margin: 0 auto;
-	padding-top: 42px
+	padding-top: 42px;
+	position: relative;
+	z-index: 2
 }
 
 .section__video iframe {
