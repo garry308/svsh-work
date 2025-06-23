@@ -186,3 +186,5 @@ window.dataVacancy = {
 }
 
 
+new AirDatepicker('#footer_date', [])
+new AirDatepicker('#popup_date', [])

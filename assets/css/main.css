@@ -35,6 +35,7 @@
 	--svsh-gradient: linear-gradient(180deg, #D11F37 0%, #DE3A76 100%);
 	--transparent-gradient: linear-gradient(to left, transparent 0%, #ffffff 50%, transparent 100%);
 	--transparent-gradient-black: linear-gradient(to bottom, transparent 0%, #000000 100%);
+	--transparent-gradient-2: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 60%, transparent 100%);
 }
 body {
 	position: relative;
@@ -309,7 +310,7 @@ body:has(.header__menu-mobile.active) {
 
 .section_main-banner {
 	min-height: 742px;
-	background:  url("../images/main.png") no-repeat 100% 100%;
+	background:  url("../images/main.webp") no-repeat 100% 100%;
 	background-size: cover;
 	position: relative;
 	scroll-snap-align: end;
@@ -333,7 +334,7 @@ body:has(.header__menu-mobile.active) {
 	top: 50%;
 	left: 4%;
 	transform: translate(0%, -50%);
-	background: url("../images/side-scroll.png") no-repeat 100% 100%;
+	background: url("../images/side-scroll.webp") no-repeat 100% 100%;
 	width: 31px;
 	height: 252px;
 }
@@ -471,7 +472,7 @@ body:has(.header__menu-mobile.active) {
 }
 
 .section_values {
-	background:  url("../images/in_heart_back.png") no-repeat ;
+	background:  url("../images/in_heart_back.webp") no-repeat ;
 	background-size: cover;
 	position: relative;
 }
@@ -505,7 +506,7 @@ body:has(.header__menu-mobile.active) {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background: url("../images/pattern.png") no-repeat;
+	background: url("../images/pattern.webp") no-repeat;
 	position: absolute;
 	z-index: -1;
 	top: 0;
@@ -516,7 +517,7 @@ body:has(.header__menu-mobile.active) {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background: url("../images/pattern_r.png") no-repeat 100% 100%;
+	background: url("../images/pattern_r.webp") no-repeat 100% 100%;
 	position: absolute;
 	z-index: -1;
 	top: 0;
@@ -525,7 +526,7 @@ body:has(.header__menu-mobile.active) {
 .section_bottom-wave::after {
 	content: '';
 	display: block;
-	background-image: url("../images/wave.png");
+	background-image: url("../images/wave.webp");
 	background-position: 0 -124px;
 	height: 11px;
 	position: absolute;
@@ -551,7 +552,7 @@ body:has(.header__menu-mobile.active) {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background:  url("../images/ref_background.png") rgba(11, 27, 50, .85) no-repeat;
+	background:  url("../images/ref_background.webp") rgba(11, 27, 50, .85) no-repeat;
 	background-size: cover;
 }
 
@@ -980,7 +981,7 @@ body:has(.header__menu-mobile.active) {
 .section__subtitle_brilliant::after {
 	content: '';
 	display: block;
-	background: url("../images/ref_brilliant.png");
+	background: url("../images/ref_brilliant.webp");
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 120px;
@@ -1239,7 +1240,7 @@ body:has(.header__menu-mobile.active) {
 	position: absolute;
 	width: 100%;
 	height: 143px;
-	background-image: url(../images/vacancy_line.png);
+	background-image: url(../images/vacancy_line.webp);
 	background-repeat: no-repeat;
 	margin: 240px 0 0 43px;
 	background-size: contain;
@@ -1259,7 +1260,7 @@ body:has(.header__menu-mobile.active) {
 	height: 47px;
 	right: -76px;
 	top: 10px;
-	background-image: url(../images/point_top.png);
+	background-image: url(../images/point_top.webp);
 	background-repeat: no-repeat;
 }
 
@@ -1286,7 +1287,7 @@ body:has(.header__menu-mobile.active) {
 	height: 56px;
 	right: -83px;
 	top: 184px;
-	background-image: url(../images/point_bottom.png);
+	background-image: url(../images/point_bottom.webp);
 	background-repeat: no-repeat;
 }
 
@@ -1298,7 +1299,7 @@ body:has(.header__menu-mobile.active) {
 	height: 56px;
 	right: -89px;
 	top: -37px;
-	background-image: url(../images/point_top.png);
+	background-image: url(../images/point_top.webp);
 	background-repeat: no-repeat;
 }
 
@@ -1466,7 +1467,7 @@ body:has(.header__menu-mobile.active) {
 
 .section_form {
 	min-height: 863px;
-	background: url(../images/main.png) no-repeat 100% 100%;
+	background: url(../images/main.webp) no-repeat 100% 100%;
 	background-size: cover;
 	position: relative;
 	overflow: hidden;
@@ -1532,12 +1533,21 @@ body:has(.header__menu-mobile.active) {
 	gap: 16px;
 }
 
-input[type="date"].section__form-input_date::-webkit-calendar-picker-indicator {
+.section__form-field_date {
+	position: relative;
+}
+.section__form-field_date::after {
+	content: '';
+	display: block;
+	position: absolute;
 	background: url('../images/icons/calendar.svg') no-repeat;
 	margin: 2px 21px 0 0;
 	width: 24px;
 	height: 24px;
 	cursor: pointer;
+	right: 0;
+	top: calc(100% - 44px);
+	pointer-events: none;
 }
 
 input[type="date"].section__form-input_date {
@@ -1819,7 +1829,7 @@ a.footer__textlink {
 
 .popup-form__right::after {
 	content: '';
-	background: url(../images/form_back.png) no-repeat;
+	background: url(../images/form_back.webp) no-repeat;
 	display: block;
 	width: 100%;
 	height: 327px;
@@ -1837,7 +1847,7 @@ a.footer__textlink {
 
 .popup-form__image-container {
 	position: relative;
-	background: url("../images/popup-back.png") no-repeat;
+	background: url("../images/popup-back.webp") no-repeat;
 	object-fit: cover;
 	height: 1383px;
 	overflow: hidden;
@@ -2201,7 +2211,7 @@ a.footer__textlink {
 	}
 
 	.section_bottom-wave::after {
-		background-image: url(../images/wave-tablet.png);
+		background-image: url(../images/wave-tablet.webp);
 		background-position: 0 -75px;
 	}
 
@@ -2255,7 +2265,7 @@ a.footer__textlink {
 
 	.section_main-banner {
 		min-height: 542px;
-		background:  url("../images/main-tablet.png") no-repeat 100% 100%;
+		background:  url("../images/main-tablet.webp") no-repeat 100% 100%;
 		background-size: cover;
 	}
 	.main-banner__text-container {
@@ -2333,8 +2343,9 @@ a.footer__textlink {
 		padding-top: 0;
 	}
 
-	.section_with-pattern::before, .section_with-pattern::after {
-		display: none;
+	.section_with-pattern::before {
+		background: var(--transparent-gradient-2);
+		z-index: 0;
 	}
 
 	.section__number {
@@ -2497,7 +2508,7 @@ a.footer__textlink {
 	}
 
 	.section_ref::before {
-		background: url("../images/ref_background-tablet.png") rgba(11, 27, 50, 1) no-repeat;
+		background: url("../images/ref_background-tablet.webp") rgba(11, 27, 50, 1) no-repeat;
 		background-size: cover;
 	}
 
@@ -2737,7 +2748,7 @@ a.footer__textlink {
 	}
 
 	.section_form {
-		background: url(../images/main-tablet.png) no-repeat 100% 100%;
+		background: url(../images/main-tablet.webp) no-repeat 100% 100%;
 		background-size: cover;
 		min-height: unset;
 	}
@@ -2894,7 +2905,7 @@ a.footer__textlink {
 	}
 
 	.popup-form__image-container {
-		background: url(../images/popup-back-tablet.png) no-repeat;
+		background: url(../images/popup-back-tablet.webp) no-repeat;
 		height: auto;
 	}
 
@@ -3087,7 +3098,7 @@ a.footer__textlink {
 	}
 
 	.section_main-banner {
-		background: url(../images/main-phone.png) no-repeat;
+		background: url(../images/main-phone.webp) no-repeat;
 		min-height: 492px;
 		background-size: cover;
 	}
@@ -3124,7 +3135,7 @@ a.footer__textlink {
 	}
 
 	.section_bottom-wave::after {
-		background-image: url(../images/wave-mob.png);
+		background-image: url(../images/wave-mob.webp);
 		background-position: 0 center;
 	}
 
@@ -3267,7 +3278,7 @@ a.footer__textlink {
 	}
 
 	.section_values {
-		background: url(../images/in_heart_back-mob.png) no-repeat;
+		background: url(../images/in_heart_back-mob.webp) no-repeat;
 		background-size: auto 47%;
 		background-color: #0B1B3280;
 		background-position-y: -2%;
@@ -3331,7 +3342,7 @@ a.footer__textlink {
 	}
 
 	.section_ref::before {
-		background: url(../images/ref_background-mobile.png) rgba(0, 0, 0, 1) no-repeat;
+		background: url(../images/ref_background-mobile.webp) rgba(0, 0, 0, 1) no-repeat;
 		background-size: cover;
 	}
 
@@ -3461,7 +3472,7 @@ a.footer__textlink {
 		left: 52%;
 		transform: translate(-50%, 0);
 		top: 51px !important;
-		background-image: url(../images/point_top.png)!important;
+		background-image: url(../images/point_top.webp)!important;
 		background-repeat: no-repeat;
 		background-size: contain;
 	}
@@ -3471,7 +3482,7 @@ a.footer__textlink {
 	}
 
 	.section__vacancies-back::before {
-		background-image: url(../images/vacancy_line-mob.png);
+		background-image: url(../images/vacancy_line-mob.webp);
 		left: 50%;
 		transform: translate(-50%, 0);
 		margin: 50px 0 0 0;
@@ -3604,6 +3615,13 @@ a.footer__textlink {
 		padding: 5px 0 5px 18px;
 	}
 
+	.section__form-field_date:after {
+		top: calc(100% - 28px);
+		width: 12px;
+		height: 12px;
+		background-size: cover;
+	}
+
 	input[type="date"].section__form-input_date {
 		padding: 2px 0 2px 16px;
 	}
@@ -3618,7 +3636,7 @@ a.footer__textlink {
 	}
 
 	.section_form {
-		background: url(../images/main-phone.png) no-repeat 100% 100%;
+		background: url(../images/main-phone.webp) no-repeat 95% 95%;
 		background-size: cover;
 	}
 
@@ -3800,4 +3818,8 @@ a.footer__textlink {
 	/*.header__top-right-phone {*/
 	/*	display: none;*/
 	/*}*/
+}
+
+.air-datepicker {
+	z-index: 5;
 }
