@@ -2220,6 +2220,72 @@ a.footer__textlink {
 	display: none
 }
 
+.fancybox__content>.f-button.is-close-btn {
+	top: 5px!important;
+}
+
+.cookie-accept {
+	position: sticky;
+	bottom: 0;
+	width: 100%;
+	z-index: 100;
+	isolation: isolate;
+	background-color: #3D3D3D99;
+	transform: translateY(0);
+	opacity: 1;
+	transition: opacity .3s, transform .3s;
+}
+
+.cookie-accept.active {
+	pointer-events: none;
+	opacity: 0;
+	transform: translateY(100%);
+}
+
+.cookie-wrapper {
+	padding: 12px 20px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	max-width: 1412px;
+	margin: 0 auto;
+}
+
+.cookie-text {
+	color: #fff;
+	flex: 1 1 0;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.cookie-text a {
+	color: #fff;
+	border-bottom: 1px solid;
+	text-decoration: none;
+	transition: color .3s;
+}
+
+.cookie-text a:hover {
+	color: #e5e5e5;
+}
+
+.cookie-btn {
+	flex: 0 0 auto;
+}
+
+.cookie-btn button {
+	padding: 12px 20px;
+	background: linear-gradient(108.73deg, #E2274F 23.73%, #CA2229 79.34%);
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	font-family: var(--font);
+	cursor: pointer;
+}
 @media screen and (max-width: 1569px) {
 	.svsh__container {
 		-ms-scroll-snap-type: none;
@@ -2426,6 +2492,10 @@ a.footer__textlink {
 
 	.section__vacancy-title {
 		margin-top: 120px
+	}
+
+	.section__vacancies-back {
+		padding-top: 110px;
 	}
 
 	.section__vacancies-back::before {
@@ -3025,6 +3095,10 @@ a.footer__textlink {
 		padding-top: 80px
 	}
 
+	.section__vacancies-back {
+		padding-top: 140px
+	}
+
 	.section__vacancies-back::before {
 		margin: 60px 0 0 0
 	}
@@ -3365,6 +3439,23 @@ a.footer__textlink {
 		width: 12px;
 		height: 12px;
 		background-size: cover;
+	}
+
+	.cookie-wrapper {
+		gap: 12px;
+		margin: 0 -8px;
+	}
+
+	.cookie-text {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.cookie-btn button {
+		padding: 8px 35px;
+		border-radius: 10px;
+		font-size: 14px;
+		line-height: 20px;
 	}
 }
 
@@ -4338,8 +4429,17 @@ a.footer__textlink {
 		-ms-grid-row: 5;
 		-ms-grid-column: 1
 	}
+
+	.cookie-wrapper {
+		margin: 0;
+		flex-direction: column;
+	}
+
+	.cookie-text {
+		text-align: center;
+		font-size: 12px;
+		line-height: 16px;
+	}
 }
 
-.fancybox__content>.f-button.is-close-btn {
-	top: 5px!important;
-}
+

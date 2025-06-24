@@ -107,7 +107,6 @@ function checkBullets(swiper) {
 
 function checkPagination() {
 	if (!window.matchMedia("(max-width: 767px)").matches && swiper.navigation.nextEl && swiper.navigation.prevEl) {
-		console.log(swiper)
 		if (swiper.snapGrid.keys.length + 1 === swiper.snapIndex || swiper.snapGrid.keys.length < 2)
 			swiper.navigation.nextEl.style.display = 'none';
 		else
@@ -139,7 +138,6 @@ sideMenuButtons.forEach((button) => {
 	})
 })
 sideMenuWrapper.addEventListener('click', () => {
-	console.log('wro');
 	sideMenu.classList.remove('active')
 })
 
@@ -206,3 +204,28 @@ if (!isMobile) {
 		autoClose: true,
 	})
 }
+
+function getCookie() {
+	return document.cookie.split('; ').reduce((acc, item) => {
+		const [name, value] = item.split('=')
+		acc[name] = value
+		return acc
+	}, {})
+}
+
+let cookieAccept = document.querySelector('.cookie-accept');
+let cookie = getCookie();
+if (cookieAccept) {
+	if (cookie['cookie_accepted'] !== 'Y')
+		cookieAccept.classList.remove('active');
+	let cookieAcceptBtn = cookieAccept.querySelector('.btn')
+	if (cookieAcceptBtn) {
+		cookieAcceptBtn.addEventListener('click', () => {
+			document.cookie = 'cookie_accepted=Y;samesite=strict;max-age=3600000';
+			cookieAccept.classList.add('active');
+		});
+	}
+}
+console.log(getCookie());
+
+
