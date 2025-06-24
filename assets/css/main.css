@@ -2346,7 +2346,9 @@ a.footer__textlink {
 	.section__container_mission {
 		margin: 0 25px;
 		padding-left: 25px;
-		padding-right: 25px
+		padding-right: 25px;
+		width: auto;
+		text-align: center
 	}
 
 	.section__special-heading, .section__special-heading-red {
