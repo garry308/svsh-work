@@ -199,9 +199,11 @@ let isMobile = window.matchMedia("(max-width: 767px)").matches;
 if (!isMobile) {
 	new AirDatepicker('#footer_date', {
 		autoClose: true,
+		maxDate: new Date()
 	})
 	new AirDatepicker('#popup_date', {
 		autoClose: true,
+		maxDate: new Date()
 	})
 }
 
