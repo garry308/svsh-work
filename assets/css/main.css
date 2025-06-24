@@ -3640,7 +3640,7 @@ a.footer__textlink {
 	}
 
 	.section__icon_about {
-		right: -23px;
+		right: 0;
 		bottom: -55px;
 		top: unset
 	}
