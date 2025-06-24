@@ -144,12 +144,24 @@ sideMenuWrapper.addEventListener('click', () => {
 })
 
 
-const elements = document.querySelectorAll('.section__form-input_phone');
-const maskOptions = {
+const elementsPhone = document.querySelectorAll('.section__form-input_phone');
+const maskPhoneOptions = {
 	mask: '+{7}(000)000-00-00'
 };
-elements.forEach((el) => {
-	IMask(el, maskOptions);
+elementsPhone.forEach((el) => {
+	IMask(el, maskPhoneOptions);
+})
+
+const elementsDate = document.querySelectorAll('.section__form-input_date');
+const maskDateOptions = {
+	mask: Date,
+	lazy: true,
+	autofix: true,
+	min: new Date(1990, 0, 1),
+	max: new Date(),
+}
+elementsDate.forEach((el) => {
+	IMask(el, maskDateOptions);
 })
 
 Fancybox.bind('[data-fancybox]', {
