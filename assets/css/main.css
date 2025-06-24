@@ -2225,7 +2225,7 @@ a.footer__textlink {
 }
 
 .cookie-accept {
-	position: sticky;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
 	z-index: 100;
