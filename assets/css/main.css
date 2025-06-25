@@ -2650,8 +2650,9 @@ a.footer__textlink {
 		height: 58px
 	}
 
-	.header__logo img {
-		width: 82px
+	.header__logo svg {
+		width: 82px;
+		height: 36.5px
 	}
 
 	.header__menu-list {
