@@ -2008,6 +2008,11 @@ input[type=date].section__form-input_date {
 	text-decoration: none
 }
 
+.footer__logo svg {
+	width: 88px;
+	height: 38px
+}
+
 .footer__logo_tablet {
 	display: none
 }
@@ -4247,8 +4252,12 @@ a.footer__textlink {
 	}
 
 	.footer__logo svg {
-		width: 55px !important;
-		height: 24px !important
+		width: 55px;
+		height: 24px
+	}
+
+	.footer__logo svg path {
+		fill: #b2b2b2;
 	}
 
 	.footer__phones:first-child {
