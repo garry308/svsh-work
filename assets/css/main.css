@@ -127,6 +127,11 @@ body:has(.header__menu-mobile.active) {
 	height: 158px
 }
 
+.header__logo svg {
+	width: 150px;
+	height: 65px
+}
+
 .header__mobile {
 	display: none;
 	-webkit-box-pack: justify;
