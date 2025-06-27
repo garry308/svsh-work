@@ -399,7 +399,7 @@ body:has(.header__menu-mobile.active) {
 }
 
 .main-banner__text-container {
-	z-index: 4;
+	z-index: 3;
 	position: relative;
 	padding: 189px 0 0 0;
 	max-width: var(--max-width);
@@ -2307,8 +2307,7 @@ a.footer__textlink {
 @media screen and (max-width: 1569px) {
 	.svsh__container {
 		-ms-scroll-snap-type: none;
-		scroll-snap-type: none;
-		height: auto
+		scroll-snap-type: none
 	}
 
 	.main-banner__text-container {
@@ -3138,7 +3137,7 @@ a.footer__textlink {
 	}
 
 	.section__vacancy-text-container {
-		min-height: 400px
+		min-height: 340px
 	}
 
 	.section__office-vacancy-button {
@@ -3573,6 +3572,7 @@ a.footer__textlink {
 		width: 69%;
 		margin-bottom: 200px;
 		display: none;
+		min-height: 156px;
 	}
 
 	.main-banner__heading_mobile {
@@ -3658,7 +3658,7 @@ a.footer__textlink {
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-box-pack: center;
-		-ms-flex-pack: center
+		-ms-flex-pack: center;
 		justify-content: center;
 		padding-right: 10px;
 		text-decoration: none
