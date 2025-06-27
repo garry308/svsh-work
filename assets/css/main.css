@@ -393,7 +393,7 @@ body:has(.header__menu-mobile.active) {
 	-webkit-transform: translate(0, -50%);
 	-ms-transform: translate(0, -50%);
 	transform: translate(0, -50%);
-	background: url(../images/side-scroll.webp) no-repeat 100% 100%;
+	background: url(../images/icons/side-scroll.svg) no-repeat 100% 100%;
 	width: 31px;
 	height: 252px
 }
@@ -1139,13 +1139,13 @@ body:has(.header__menu-mobile.active) {
 .section__subtitle_brilliant::after {
 	content: '';
 	display: block;
-	background: url(../images/ref_brilliant.webp);
+	background: url(../images/icons/ref_brilliant.svg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 120px;
 	height: 120px;
 	position: absolute;
-	right: -130px;
+	right: -150px;
 	top: -81px
 }
 
@@ -3983,10 +3983,6 @@ a.footer__textlink {
 		-webkit-transform: translate(-50%, 0);
 		-ms-transform: translate(-50%, 0);
 		transform: translate(-50%, 0)
-	}
-
-	.svsh__container {
-		overflow: hidden
 	}
 
 	.section__light_16 {
