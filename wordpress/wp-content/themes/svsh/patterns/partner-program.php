@@ -18,7 +18,14 @@
 		<div class="section__title-container section__title-container_ref">
 			<?=carbon_get_theme_option('partner_program_subtitle');?>
 		</div>
-		<a href="#form"><button class="svsh__button svsh__button_short"><?=carbon_get_theme_option('partner_program_button_text');?></button></a>
+		<a href="#form">
+			<button class="svsh__button svsh__button_short">
+				<?=carbon_get_theme_option('partner_program_button_text');?>
+			</button>
+		</a>
+		<a class="section__ref-link" href="/wp-content/uploads/2025/07/partner-program-rules.pdf" target="_blank">
+			*Положение о проведении реферальной программы «Приведи друга»
+		</a>
 	</div>
 	<div class="section__light section__light_1"></div>
 	<div class="section__light section__light_2"></div>

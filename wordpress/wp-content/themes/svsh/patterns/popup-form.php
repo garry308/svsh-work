@@ -57,8 +57,8 @@
 								</svg>
 							</label>
 							<div class="section__form-checkbox-title section__form-checkbox-title_gray">
-								Нажимая на "Отправить", Вы соглашаетесь с <a class="section__form-checkbox-link section__form-checkbox-link_gray" href="#">Условиями сервиса</a> и
-								<a class="section__form-checkbox-link section__form-checkbox-link_gray" href="#">Политикой конфиденциальности</a>
+								Нажимая на "Отправить", Вы соглашаетесь с <a class="section__form-checkbox-link section__form-checkbox-link_gray" target="_blank" href="/wp-content/uploads/2025/07/conf-policy.pdf">Условиями сервиса</a> и
+								<a class="section__form-checkbox-link section__form-checkbox-link_gray" target="_blank" href="/wp-content/uploads/2025/07/policy.pdf">Политикой конфиденциальности</a>
 							</div>
 						</div>
 					</div>

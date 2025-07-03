@@ -12,8 +12,8 @@
  */
 ?>
 <!-- wp:group -->
-<div class="footer__top">
-	<p class="footer__subline">Мы ищем тех, кто готов и хочет приходить к нам с удовольствием каждый день. Присоединяйтесь ;)</p>
+<div class="footer__top" id="footer">
+	<p class="footer__subline"><?=carbon_get_theme_option('footer_top_text');?></p>
 </div>
 <div class="footer__main">
 	<div class="footer__main-container">
@@ -37,107 +37,107 @@
 			</div>
 			<nav class="footer__menu">
 				<ul class="footer__menu-list">
-					<li class="footer__menu-item">
-						<a class="footer__menu-item-link" href="#aboutus">О нас</a>
-					</li>
-					<li class="footer__menu-item">
-						<a class="footer__menu-item-link" href="#whywe">Преимущества</a>
-					</li>
-					<li class="footer__menu-item">
-						<a class="footer__menu-item-link" href="#vacancies">Вакансии</a>
-					</li>
-					<li class="footer__menu-item">
-						<a class="footer__menu-item-link" href="#footer">Контакты</a>
-					</li>
+					<?php
+					$slides = carbon_get_theme_option('menu_item');
+					foreach( $slides as $slide ) {
+						?>
+						<li class="footer__menu-item">
+							<a class="footer__menu-item-link" href="<?=$slide['link']?>"><?=$slide['title']?></a>
+						</li>
+						<?php
+					}
+					?>
 				</ul>
 			</nav>
 			<div class="footer__links desktop-only">
-				<a href="https://vk.com/samaya_vkusnaya_shaurma" class="footer__link footer__link_vk"></a>
-				<a href="https://www.youtube.com/channel/UCuj4wqE6Y90SOAfQoR74_wA" class="footer__link footer__link_yt"></a>
-				<a href="https://ok.ru/profile/576236221319" class="footer__link footer__link_ok"></a>
-				<a href="https://свш.рф/" class="footer__link footer__link_web"></a>
-				<a href="https://t.me/svshrf" class="footer__link footer__link_tg"></a>
+				<a href="<?=carbon_get_theme_option('vk_link');?>" class="footer__link footer__link_vk"></a>
+				<a href="<?=carbon_get_theme_option('yt_link');?>" class="footer__link footer__link_yt"></a>
+				<a href="<?=carbon_get_theme_option('ok_link');?>" class="footer__link footer__link_ok"></a>
+				<a href="<?=carbon_get_theme_option('web_link');?>" class="footer__link footer__link_web"></a>
+				<a href="<?=carbon_get_theme_option('tg_link');?>" class="footer__link footer__link_tg"></a>
 			</div>
 		</div>
 		<div class="footer__second-line footer__second-line_desktop-only">
-			<a href="#" class="footer__textlink">Пользовательское соглашение</a>
-			<p class="footer__textlink">© ООО «СВШ», 2025. Все права защищены</p>
-			<a href="#" class="footer__textlink">Политика обработки персональных данных</a>
+			<a target="_blank" href="/wp-content/uploads/2025/07/conf-policy.pdf" class="footer__textlink">Пользовательское соглашение</a>
+			<p class="footer__textlink"><?=carbon_get_theme_option('footer_copyright');?></p>
+			<a target="_blank" href="/wp-content/uploads/2025/07/policy.pdf" class="footer__textlink">Политика обработки персональных данных</a>
 		</div>
 		<div class="footer__second-line footer__second-line_tablet-only">
 			<div class="footer__phones">
-				<a href="tel:+74872573444" class="footer__phone">
-					+7 (4872) 57-34-44,
+				<a href="tel:<?=carbon_get_theme_option('phone1');?>" class="footer__phone">
+					<?=carbon_get_theme_option('phone1_formatted');?>,
 				</a>
-				<a href="tel:+79029057454" class="footer__phone">
-					+7 (902) 905-74-54
+				<a href="tel:<?=carbon_get_theme_option('phone2');?>" class="footer__phone">
+					<?=carbon_get_theme_option('phone2_formatted');?>
 				</a>
 			</div>
 			<div class="footer__links tablet-only">
-				<a href="https://vk.com/samaya_vkusnaya_shaurma" class="footer__link footer__link_vk"></a>
-				<a href="https://www.youtube.com/channel/UCuj4wqE6Y90SOAfQoR74_wA" class="footer__link footer__link_yt"></a>
-				<a href="https://ok.ru/profile/576236221319" class="footer__link footer__link_ok"></a>
-				<a href="https://свш.рф/" class="footer__link footer__link_web"></a>
-				<a href="https://t.me/svshrf" class="footer__link footer__link_tg"></a>
+				<a href="<?=carbon_get_theme_option('vk_link');?>" class="footer__link footer__link_vk"></a>
+				<a href="<?=carbon_get_theme_option('yt_link');?>" class="footer__link footer__link_yt"></a>
+				<a href="<?=carbon_get_theme_option('ok_link');?>" class="footer__link footer__link_ok"></a>
+				<a href="<?=carbon_get_theme_option('web_link');?>" class="footer__link footer__link_web"></a>
+				<a href="<?=carbon_get_theme_option('tg_link');?>" class="footer__link footer__link_tg"></a>
 			</div>
 			<div class="footer__phones">
-				<a href="mailto:hr@svsh.info" class="footer__phone footer__phone_mail">
-					hr@svsh.info
+				<a href="mailto:<?=carbon_get_theme_option('footer_email');?>" class="footer__phone footer__phone_mail">
+					<?=carbon_get_theme_option('footer_email');?>
 				</a>
 			</div>
 		</div>
 		<div class="footer__thrid-line footer__thrid-line_desktop-only">
 			<div class="footer__thrid-line-container">
-				<p class="footer__textlink">ООО «СВШ»</p>
-				<p class="footer__textlink">ИНН 7105051710</p>
-				<p class="footer__textlink">ОГРН 1177154017260</p>
-				<p class="footer__textlink">115191, г. Москва, вн. тер. г. муниципальный округ Даниловский, ул. Малая Тульская, д. 16, пом.1Б/1</p>
+				<p class="footer__textlink"><?=carbon_get_theme_option('footer_company');?></p>
+				<p class="footer__textlink"><?=carbon_get_theme_option('footer_inn');?></p>
+				<p class="footer__textlink"><?=carbon_get_theme_option('footer_ogrn');?></p>
+				<p class="footer__textlink"><?=carbon_get_theme_option('footer_address');?></p>
 			</div>
 			<div class="footer__phones">
-				<a href="tel:+74872573444" class="footer__phone">
-					+7 (4872) 57-34-44,
+				<a href="tel:<?=carbon_get_theme_option('phone1');?>," class="footer__phone">
+					<?=carbon_get_theme_option('phone1_formatted');?>,
 				</a>
-				<a href="tel:+79029057454" class="footer__phone">
-					+7 (902) 905-74-54
+				<a href="tel:<?=carbon_get_theme_option('phone2');?>," class="footer__phone">
+					<?=carbon_get_theme_option('phone2_formatted');?>,
 				</a>
 			</div>
 			<div class="footer__phones">
-				<a href="mailto:hr@svsh.info" class="footer__phone footer__phone_mail">
-					hr@svsh.info
+				<a href="mailto:<?=carbon_get_theme_option('footer_email');?>" class="footer__phone footer__phone_mail">
+					<?=carbon_get_theme_option('footer_email');?>
 				</a>
 			</div>
 		</div>
 		<div class="footer__thrid-line footer__thrid-line_tablet-only">
 			<div class="footer__thrid-line-container">
-				<p class="footer__textlink">ООО «СВШ» ИНН 7105051710, ОГРН 1177154017260,<br>
-					115191, г. Москва, вн. тер. г. муниципальный округ Даниловский,<br>
-					ул. Малая Тульская, д. 16, пом.1Б/1
+				<p class="footer__textlink"><?=carbon_get_theme_option('footer_company');?>
+					<?=carbon_get_theme_option('footer_inn');?>,
+					<?=carbon_get_theme_option('footer_ogrn');?>,<br>
+					<?=carbon_get_theme_option('footer_address');?>
 				</p>
 			</div>
 			<div class="footer__thrid-line-container footer__thrid-line-container_right">
-				<p class="footer__textlink">© ООО «СВШ», 2025. Все права защищены</p>
-				<a href="#" class="footer__textlink">Пользовательское соглашение</a>
-				<a href="#" class="footer__textlink">Политика обработки персональных данных</a>
+				<p class="footer__textlink"><?=carbon_get_theme_option('footer_company');?>, <?=date('Y')?>. Все права защищены</p>
+				<a target="_blank" href="/wp-content/uploads/2025/07/conf-policy.pdf" class="footer__textlink">Пользовательское соглашение</a>
+				<a target="_blank" href="/wp-content/uploads/2025/07/policy.pdf" class="footer__textlink">Политика обработки персональных данных</a>
 			</div>
 		</div>
 		<div class="footer__thrid-line footer__thrid-line_mobile-only">
 			<div class="footer__links mobile-only">
-				<a href="https://vk.com/samaya_vkusnaya_shaurma" class="footer__link footer__link_vk"></a>
-				<a href="https://www.youtube.com/channel/UCuj4wqE6Y90SOAfQoR74_wA" class="footer__link footer__link_yt"></a>
-				<a href="https://ok.ru/profile/576236221319" class="footer__link footer__link_ok"></a>
-				<a href="https://свш.рф/" class="footer__link footer__link_web"></a>
-				<a href="https://t.me/svshrf" class="footer__link footer__link_tg"></a>
+				<a href="<?=carbon_get_theme_option('vk_link');?>" class="footer__link footer__link_vk"></a>
+				<a href="<?=carbon_get_theme_option('yt_link');?>" class="footer__link footer__link_yt"></a>
+				<a href="<?=carbon_get_theme_option('ok_link');?>" class="footer__link footer__link_ok"></a>
+				<a href="<?=carbon_get_theme_option('web_link');?>" class="footer__link footer__link_web"></a>
+				<a href="<?=carbon_get_theme_option('tg_link');?>" class="footer__link footer__link_tg"></a>
 			</div>
 			<div class="footer__thrid-line-container">
-				<p class="footer__textlink">ООО «СВШ» ИНН 7105051710, ОГРН 1177154017260,<br>
-					115191, г. Москва, вн. тер. г. муниципальный округ Даниловский,<br>
-					ул. Малая Тульская, д. 16, пом.1Б/1
+				<p class="footer__textlink"><?=carbon_get_theme_option('footer_company');?>
+					<?=carbon_get_theme_option('footer_inn');?>,
+					<?=carbon_get_theme_option('footer_ogrn');?>,<br>
+					<?=carbon_get_theme_option('footer_address');?>
 				</p>
 			</div>
 			<div class="footer__thrid-line-container">
-				<p class="footer__textlink">© ООО «СВШ», 2025. Все права защищены</p>
-				<a href="#" class="footer__textlink">Пользовательское соглашение</a>
-				<a href="#" class="footer__textlink">Политика обработки персональных данных</a>
+				<p class="footer__textlink">© <?=carbon_get_theme_option('footer_company');?>, <?=date('Y')?>. Все права защищены</p>
+				<a target="_blank" href="/wp-content/uploads/2025/07/conf-policy.pdf" class="footer__textlink">Пользовательское соглашение</a>
+				<a target="_blank" href="/wp-content/uploads/2025/07/policy.pdf" class="footer__textlink">Политика обработки персональных данных</a>
 			</div>
 		</div>
 	</div>

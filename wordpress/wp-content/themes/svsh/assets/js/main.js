@@ -176,25 +176,6 @@ Fancybox.bind('[data-fancybox]', {
 	},
 });
 
-window.dataVacancy = {
-	'1': {
-		title: 'Повар-кассир',
-		description: '<b>На этой позиции ты будешь:</b><p>-общаться с гостями и принимать заказы;</p><p>-готовить вкусные блюда;</p><p>-поддерживать порядок и классную атмосферу в кафе.</p><br><b>Требование к кандидатам:</b><p>-наличие документов для официального трудоустройства;</p><p>-возраст от 18 лет.</p>'
-	},
-	'2': {
-		title: 'Наставник',
-		description: '<b>На этой позиции ты будешь:</b><p>-общаться с гостями и принимать заказы;</p><p>-готовить вкусные блюда;</p><p>-поддерживать порядок и классную атмосферу в кафе.</p><br><b>Требование к кандидатам:</b><p>-наличие документов для официального трудоустройства;</p><p>-возраст от 18 лет.</p>'
-	},
-	'3': {
-		title: 'Специалист службы контроля качества',
-		description: '<p>Это сотрудник, ответственный за проверку и обеспечение соответствия продукции или услуг стандартам качества и техническим требованиям.</p>'
-	},
-	'4': {
-		title: 'Управляющий кафе',
-		description: '<p>Управляющий сетью фастфуд - руководит, организует и контролирует внешние и внутренние процессы деятельности торговых точек.</p>'
-	},
-}
-
 let isMobile = window.matchMedia("(max-width: 767px)").matches;
 if (!isMobile) {
 	new AirDatepicker('#footer_date', {
@@ -230,4 +211,31 @@ if (cookieAccept) {
 }
 console.log(getCookie());
 
+document.addEventListener("DOMContentLoaded", function () {
+	const forms = document.querySelectorAll(".section__form");
+	console.log(forms);
+	forms.forEach(form => {
+		form.addEventListener("submit", function (e) {
+			e.preventDefault();
+			const formData = new FormData(form);
+			formData.append('action', 'form_submit');
+			fetch(window.myajax.url, {
+				method: "POST",
+				body: formData
+			})
+				.then(response => response.json())
+				.then(data => {
+					if (data.result > 0) {
+						alert('Заявка отправлена');
+					}
+					else
+					{
+						alert('Произошла ошибка, попробуйте позже.')
+					}
+				})
+				.catch(error => console.error("Ошибка:", error));
+		});
+	})
+
+});
 

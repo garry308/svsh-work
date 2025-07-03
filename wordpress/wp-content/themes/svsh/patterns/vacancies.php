@@ -28,8 +28,10 @@
 			<div class="section__vacancies-back"></div>
 			<div class="section__vacancies-container swiper-wrapper">
 				<?php
+				$jsDataVacancies = [];
 				if( $slides = carbon_get_theme_option('vacancies_cafe') ) {
 					foreach( $slides as $key => $slide ) {
+						$jsDataVacancies[$key+1] = ['title' => $slide['name'], 'description' => $slide['about_form']];
 						?>
 						<div class="section__vacancy swiper-slide <?=($key == array_key_last($slides)) ? 'section__vacancy_last' : ''?>">
 							<img src="<?=wp_get_attachment_image_url($slide['image'], 'full')?>"
@@ -68,6 +70,7 @@
 				<?php
 				if( $slides = carbon_get_theme_option('vacancies_office') ) {
 					foreach( $slides as $key => $slide ) {
+						$jsDataVacancies[($key+1).'_office'] = ['title' => $slide['name'], 'description' => $slide['about_form']];
 						?>
 						<div class="section__office-vacancy-container">
 							<div class="section__office-vacancy-button">
@@ -92,4 +95,7 @@
 		</div>
 	</div>
 </section>
+<script>
+	window.dataVacancy = <?=json_encode($jsDataVacancies)?>;
+</script>
 <!-- /wp:group -->

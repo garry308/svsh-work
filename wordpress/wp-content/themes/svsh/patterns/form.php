@@ -12,7 +12,7 @@
 <!-- wp:group -->
 <section class="section section_form" id="form">
 	<div class="section__container section__container_form">
-		<h2 class="section__title section__title_form">Заполни анкету</h2>
+		<h2 class="section__title section__title_form"><?=carbon_get_theme_option('form_title');?></h2>
 		<form class="section__form" action="#" autocomplete="on" method="POST">
 			<div class="section__form-fields">
 				<div class="section__form-field">
@@ -36,8 +36,8 @@
 						</svg>
 					</label>
 					<div class="section__form-checkbox-title">
-						Нажимая на "Отправить", Вы соглашаетесь с <a class="section__form-checkbox-link" href="#">Условиями сервиса</a> и
-						<a class="section__form-checkbox-link" href="#">Политикой конфиденциальности</a>
+						Нажимая на "Отправить", Вы соглашаетесь с <a class="section__form-checkbox-link" target="_blank" href="/wp-content/uploads/2025/07/conf-policy.pdf">Условиями сервиса</a> и
+						<a class="section__form-checkbox-link" target="_blank" href="/wp-content/uploads/2025/07/policy.pdf">Политикой конфиденциальности</a>
 					</div>
 				</div>
 				<button class="svsh__button svsh__button_center" type="submit">Отправить</button>

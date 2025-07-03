@@ -398,3 +398,51 @@ if ( ! function_exists( 'svsh_format_binding' ) ) :
 		}
 	}
 endif;
+add_action( 'wp_head', 'myajax_data', 8 );
+function myajax_data(){
+	$data = [
+		'url' => admin_url( 'admin-ajax.php' ),
+	];
+	?>
+	<script id="myajax_data">
+		window.myajax = <?= wp_json_encode( $data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ) ?>
+	</script>
+	<?php
+}
+add_action( 'wp_ajax_form_submit', 'form_submit' );
+add_action( 'wp_ajax_nopriv_form_submit', 'form_submit' );
+function form_submit() {
+	$name = isset($_POST['name']) ? htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8') : '';
+	$birthdate = isset($_POST['birthdate']) ? htmlspecialchars($_POST['birthdate'], ENT_QUOTES, 'UTF-8') : '';
+	$city = isset($_POST['city']) ? htmlspecialchars($_POST['city'], ENT_QUOTES, 'UTF-8') : '';
+	$phone = isset($_POST['phone']) ? htmlspecialchars($_POST['phone'], ENT_QUOTES, 'UTF-8') : '';
+	$vacancy = isset($_POST['vacancy']) ? htmlspecialchars($_POST['vacancy'], ENT_QUOTES, 'UTF-8') : 'Не указана';
+
+	$request = [
+			'fields' => [
+				"TITLE" => "Новая заявка - работа в СВШ (".$phone.")",
+				"COMMENTS" => 'Имя - '.$name.'<br>Дата рождения - '.$birthdate.'<br>Номер телефона - '.$phone.'<br>Вакансия - '.$vacancy,
+			],
+			'params' => ['REGISTER_SONET_EVENT' => 'Y']
+	];
+	$method = 'crm.deal.add.json';
+	$queryUrl = "https://b24-gtvgg4.bitrix24.ru/rest/1/b8yt91p83i01gsda/".$method;
+	$curl = curl_init();
+	curl_setopt_array($curl, array(
+		CURLOPT_URL => $queryUrl,
+		CURLOPT_SSL_VERIFYPEER => 0,
+		CURLOPT_POST => 1,
+		CURLOPT_HEADER => 0,
+		CURLOPT_RETURNTRANSFER => 1,
+	));
+	if(!empty($request)){
+		curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($request));
+	}
+	$result = curl_exec($curl);
+	curl_close($curl);
+	echo $result;
+
+	// выход нужен для того, чтобы в ответе не было ничего лишнего,
+	// только то что возвращает функция
+	wp_die();
+}
