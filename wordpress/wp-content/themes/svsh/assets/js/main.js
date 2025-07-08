@@ -170,8 +170,13 @@ Fancybox.bind('[data-fancybox]', {
 			let title = slide.contentEl.querySelector('.popup-form__title')
 			let description = slide.contentEl.querySelector('.popup-form__description');
 			let vacancyData = window.dataVacancy[fancybox.options.triggerEl.dataset.vacancy];
-			title.innerHTML = (typeof vacancyData !== 'undefined') ?  vacancyData.title : 'Вакансия'
-			description.innerHTML = (typeof vacancyData !== 'undefined') ?  vacancyData.description : ''
+			let hiddenVacancyInput = slide.contentEl.querySelector('#vacancy_title');
+			if (title)
+				title.innerHTML = (typeof vacancyData !== 'undefined') ?  vacancyData.title : 'Вакансия'
+			if (description)
+				description.innerHTML = (typeof vacancyData !== 'undefined') ?  vacancyData.description : ''
+			if (hiddenVacancyInput)
+				hiddenVacancyInput.value = (typeof vacancyData !== 'undefined') ?  vacancyData.title : 'Не указана'
 		},
 	},
 });
@@ -213,7 +218,6 @@ console.log(getCookie());
 
 document.addEventListener("DOMContentLoaded", function () {
 	const forms = document.querySelectorAll(".section__form");
-	console.log(forms);
 	forms.forEach(form => {
 		form.addEventListener("submit", function (e) {
 			e.preventDefault();
@@ -226,7 +230,14 @@ document.addEventListener("DOMContentLoaded", function () {
 				.then(response => response.json())
 				.then(data => {
 					if (data.result > 0) {
-						alert('Заявка отправлена');
+						console.log(form);
+						form.reset();
+						Fancybox.close();
+						Fancybox.show([
+							{
+								src: '#form-success'
+							}
+						])
 					}
 					else
 					{

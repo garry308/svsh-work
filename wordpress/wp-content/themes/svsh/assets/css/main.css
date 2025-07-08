@@ -74,6 +74,10 @@ body:has(.header__menu-mobile.active) {
 	text-decoration: none
 }
 
+.svsh__button:focus-visible {
+	border: none;
+}
+
 .svsh__button:hover {
 	background: var(--svsh-red-color)
 }
@@ -307,6 +311,11 @@ body:has(.header__menu-mobile.active) {
 	box-sizing: border-box
 }
 
+.header__menu-mobile-wrapper .header__logo svg {
+	width: 123px;
+	height: 54px;
+}
+
 .header__menu-mobile .main-banner__heading {
 	color: #dd3974;
 	position: relative;
@@ -395,7 +404,7 @@ body:has(.header__menu-mobile.active) {
 	-ms-transform: translate(0, -50%);
 	transform: translate(0, -50%);
 	background: url(../images/icons/side-scroll.svg) no-repeat 100% 100%;
-	width: 31px;
+	width: 20px;
 	height: 252px
 }
 
@@ -562,6 +571,22 @@ body:has(.header__menu-mobile.active) {
 	bottom: 0;
 	background-color: rgba(11, 27, 50, .5)
 }
+.popup-form_success {
+	display: none;
+	width: 90%;
+	max-width: 1244px;
+}
+.popup-form-container_success {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 27px 68px;
+}
+
+.form-success-image {
+	width: 75%;
+	margin-bottom: 30px;
+}
 
 .section_find {
 	margin-top: -1px
@@ -678,6 +703,10 @@ body:has(.header__menu-mobile.active) {
 	-ms-flex-direction: column;
 	flex-direction: column;
 	gap: 40px
+}
+
+.section__container_ref a {
+	width: fit-content;
 }
 
 .section__container_vacancies {
@@ -1080,7 +1109,7 @@ body:has(.header__menu-mobile.active) {
 .section__whywe-card-title {
 	color: #d21b37;
 	font-size: 30px;
-	font-weight: 400;
+	font-weight: 500;
 	line-height: 35px;
 	letter-spacing: -1.2px;
 	margin: 0
@@ -1117,12 +1146,16 @@ body:has(.header__menu-mobile.active) {
 	font-weight: 700;
 	line-height: 42px;
 	letter-spacing: -.48px;
-	text-transform: none
+	text-transform: none;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: rgba(245, 245, 245, 0.20);
 }
 
 .section__title_ref {
 	color: #fff;
-	font-weight: 300
+	font-weight: 300;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: rgba(245, 245, 245, 0.20);
 }
 
 .section__subtitle {
@@ -1607,7 +1640,7 @@ body:has(.header__menu-mobile.active) {
 }
 
 .section__office-vacancy-button.active {
-	background: var(--svsh-gradient);
+	background: linear-gradient(90deg, #E32750 0%, #CA2229 100%);
 	color: #fff
 }
 
@@ -1683,6 +1716,10 @@ body:has(.header__menu-mobile.active) {
 
 .section__vacancy-pagination-bullet_next, .section__vacancy-pagination-bullet_prev {
 	width: auto !important
+}
+
+.section__vacancy-pagination-bullet.disabled {
+	display: none;
 }
 
 .section__vacancy_last::after {
@@ -2797,6 +2834,12 @@ a.footer__textlink {
 		line-height: 60px
 	}
 
+	.section__title_form {
+		font-size: 48px;
+		line-height: 60px;
+		margin: 36px 0;
+	}
+
 	.section__icon {
 		max-width: 188px
 	}
@@ -3230,10 +3273,6 @@ a.footer__textlink {
 		width: unset
 	}
 
-	.section__title_form {
-		margin: 0
-	}
-
 	.section__form-field {
 		width: clamp(280px, 70vw, 479px)
 	}
@@ -3400,7 +3439,8 @@ a.footer__textlink {
 	}
 
 	.popup-form__description {
-		height: 250px
+		height: 250px;
+		min-height: fit-content;
 	}
 
 	.popup-form__vac-text {
@@ -4426,7 +4466,7 @@ a.footer__textlink {
 	}
 
 	.popup-form__description.active * {
-		display: inline-block
+		display: block;
 	}
 
 	.popup-form__form-title {
@@ -4502,6 +4542,23 @@ a.footer__textlink {
 		font-size: 12px;
 		line-height: 16px;
 	}
+
+	.popup-form-container_success {
+		padding: 20px;
+	}
+
+	.popup-form_success .popup-form__title {
+		font-size: 16px;
+		line-height: 21px;
+	}
+
+	.form-success-image {
+		width: 100%;
+	}
 }
 
 
+:root :where(.is-layout-flow) > :last-child {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}

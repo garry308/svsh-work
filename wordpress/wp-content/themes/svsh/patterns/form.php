@@ -47,4 +47,5 @@
 	<div class="section__light section__light_5"></div>
 	<div class="section__light section__light_6"></div>
 </section>
+
 <!-- /wp:group -->

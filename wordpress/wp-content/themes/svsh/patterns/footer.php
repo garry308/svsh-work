@@ -136,8 +136,8 @@
 			</div>
 			<div class="footer__thrid-line-container">
 				<p class="footer__textlink">© <?=carbon_get_theme_option('footer_company');?>, <?=date('Y')?>. Все права защищены</p>
-				<a target="_blank" href="/wp-content/uploads/2025/07/conf-policy.pdf" class="footer__textlink">Пользовательское соглашение</a>
 				<a target="_blank" href="/wp-content/uploads/2025/07/policy.pdf" class="footer__textlink">Политика обработки персональных данных</a>
+				<a target="_blank" href="/wp-content/uploads/2025/07/conf-policy.pdf" class="footer__textlink">Пользовательское соглашение</a>
 			</div>
 		</div>
 	</div>

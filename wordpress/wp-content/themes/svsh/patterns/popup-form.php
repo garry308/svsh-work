@@ -48,6 +48,7 @@
 								<input type="text" name="phone" autocomplete="phone" required="" pattern="^\+7\([0-9]{3}\)[0-9\-]{9}$" class="section__form-input section__form-input_white section__form-input_phone" placeholder="Телефон">
 							</label>
 						</div>
+						<input type="hidden" id="vacancy_title" name="vacancy">
 						<button class="svsh__button svsh__button_center svsh__button_big" type="submit">Отправить</button>
 						<div class="section__form-field section__form-field_checkbox section__form-field_checkbox_popup">
 							<label class="section__form-checkbox-label">
@@ -66,6 +67,13 @@
 			</div>
 		</div>
 
+	</div>
+</div>
+<div class="popup-form_success" id="form-success">
+	<div class="popup-form-container_success">
+		<img class="form-success-image" src="<?=get_template_directory_uri();?>/assets/images/confetti.webp" alt="Успех">
+		<h2 class="popup-form__title">Анкета успешно отправлена</h2>
+		<button class="svsh__button svsh__button_center close" onclick="Fancybox.close()">Супер</button>
 	</div>
 </div>
 <!-- /wp:group -->
